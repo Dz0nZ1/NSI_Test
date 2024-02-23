@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "McCgrZrrUbG/6a/IXLt43Vq0krsqdyWppnXaZbWrLgnzJ/cC1fsOpyYCHniTTht0MEI9n6yrpSn468fq6STdAg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DzOnZi\\Desktop\\NSI_Test\\Test\\Test.Infrastructure\\Test.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DzOnZi\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\DzOnZi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\DzOnZi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
