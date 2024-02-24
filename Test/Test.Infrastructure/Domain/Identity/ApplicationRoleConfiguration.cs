@@ -7,7 +7,7 @@ namespace Test.Infrastructure.Domain.Identity;
 public class ApplicationRoleConfiguration : IEntityTypeConfiguration<ApplicationRole>
 {
 
-    private const string AdminId = "25264919-5461-464d-964a-0fc0efd9274b";
+    private const string AdminId = "40FEB7B4-B530-4EA2-B96F-582D88277E4B";
     private const string StudentServiceId = "2fc770ab-3846-4496-97c2-f6b197d81c87";
     private const string  TeacherId = "32974250-4c5f-42a6-a3d7-1b45e7d0862b";
     

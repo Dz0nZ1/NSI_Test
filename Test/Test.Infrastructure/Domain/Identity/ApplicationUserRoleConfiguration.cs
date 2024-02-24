@@ -6,6 +6,10 @@ namespace Test.Infrastructure.Domain.Identity;
 
 public class ApplicationUserRoleConfiguration : IEntityTypeConfiguration<ApplicationUserRole>
 {
+
+    private const string AdminUserId = "4DAF65CB-CC0E-4C81-9183-20097EA81F5A";
+    private const string AdminRoleId = "40FEB7B4-B530-4EA2-B96F-582D88277E4B";
+    
     public void Configure(EntityTypeBuilder<ApplicationUserRole> builder)
     {
         builder.ToTable("UserRoles");
