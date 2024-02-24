@@ -29,8 +29,8 @@ public class ApplicationUserRoleConfiguration : IEntityTypeConfiguration<Applica
 
         var iur = new ApplicationUserRole
         {
-            RoleId = "25264919-5461-464d-964a-0fc0efd9274b",
-            UserId = "4DAF65CB-CC0E-4C81-9183-20097EA81F5A"
+            RoleId = AdminRoleId,
+            UserId = AdminUserId
         };
 
         builder.HasData(iur);
