@@ -6,7 +6,7 @@ using Test.Domain.Entities;
 
 namespace Test.Infrastructure.Contexts;
 
-public class TestDbContext(DbContextOptions<TestDbContext> options) : IdentityDbContext<ApplicationUser,
+public class TestDbContext : IdentityDbContext<ApplicationUser,
     ApplicationRole,
     string,
     IdentityUserClaim<string>,
@@ -14,10 +14,11 @@ public class TestDbContext(DbContextOptions<TestDbContext> options) : IdentityDb
     IdentityUserLogin<string>,
     IdentityRoleClaim<string>,
     IdentityUserToken<string>
->(options)
+>
 
 
 {
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -26,6 +27,6 @@ public class TestDbContext(DbContextOptions<TestDbContext> options) : IdentityDb
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password:root;Database=Test");
+        optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=root;Database=Test");
     }
 }
