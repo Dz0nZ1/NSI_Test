@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qdQNnjO0TExonC0f5++deugr9HvuaNvwh3ZnmfZLeY7gmgeI9DymkDnZHDmvCp96oekwJb1Nkx1jf4vODwZ9Sw==",
+  "dgSpecHash": "6JYf2dm97qt9nacDWHnYfHL0AX+rQNkw3K9MwHDdjHcwDHgWJlDAFz9de65vU6U+VWgNtmL4U13MSecOu9DG5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\DzOnZi\\Desktop\\NSI_Test\\Test\\Test.Application\\Test.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\DzOnZi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\DzOnZi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\DzOnZi\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
