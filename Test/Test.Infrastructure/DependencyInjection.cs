@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Test.Application.Common.Interfaces;
 using Test.Infrastructure.Configuration;
 using Test.Infrastructure.Contexts;
 
@@ -21,6 +22,8 @@ public static class DependencyInjection
                 x => x.MigrationsAssembly(typeof(TestDbContext).Assembly.FullName))
 
         );
+
+        services.AddScoped<ITestDbContext>(provider => provider.GetRequiredService<TestDbContext>());
 
 
        return services;
