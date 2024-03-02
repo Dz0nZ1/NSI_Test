@@ -167,7 +167,7 @@ namespace Test.Infrastructure.Migrations
                             Id = "34DE6D7C-4270-425B-987F-8D2CC41CD857",
                             ConcurrencyStamp = "a09ab67f-02d6-4910-8659-3385759d8037",
                             Name = "StudentService",
-                            NormalizedName = "EMPLOYEE"
+                            NormalizedName = "STUDENTSERVICE"
                         },
                         new
                         {
@@ -289,6 +289,47 @@ namespace Test.Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Test.Domain.Entities.Company", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies", (string)null);
+                });
+
+            modelBuilder.Entity("Test.Domain.Entities.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("CompanyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.ToTable("Products", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Test.Domain.Entities.ApplicationRole", null)
@@ -344,6 +385,17 @@ namespace Test.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Test.Domain.Entities.Product", b =>
+                {
+                    b.HasOne("Test.Domain.Entities.Company", "Company")
+                        .WithMany("Products")
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
+                });
+
             modelBuilder.Entity("Test.Domain.Entities.ApplicationRole", b =>
                 {
                     b.Navigation("UserRoles");
@@ -352,6 +404,11 @@ namespace Test.Infrastructure.Migrations
             modelBuilder.Entity("Test.Domain.Entities.ApplicationUser", b =>
                 {
                     b.Navigation("Roles");
+                });
+
+            modelBuilder.Entity("Test.Domain.Entities.Company", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

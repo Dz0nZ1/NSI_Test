@@ -28,7 +28,7 @@ public class ApplicationRoleConfiguration : IEntityTypeConfiguration<Application
             {
                 Id = StudentServiceId,
                 Name = "StudentService",
-                NormalizedName = "EMPLOYEE",
+                NormalizedName = "STUDENTSERVICE",
                 ConcurrencyStamp = "a09ab67f-02d6-4910-8659-3385759d8037"
             },
             new ApplicationRole()
