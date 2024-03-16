@@ -1,3 +1,4 @@
+using Test.Api.Filters;
 using Test.Application;
 using Test.Infrastructure;
 
@@ -9,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => options.Filters.Add<ApiExceptionFilterAttribute>());
 
 var app = builder.Build();
 
