@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U//x9fD2mrd79cBD75JVSXNYAZVQOP7P3/m070Q6JCdAluBP4zBsYSeAL81zhttHaOVogH9KBjMHUFJtk4trpQ==",
+  "dgSpecHash": "9L5VAXfZUKq7b14kOEK2+2wFqohgM3deRvCy71wGBUPmaN+AUNtd2pmvraJzpqTBSlkruf3SyTrc4exalCAAZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DzOnZi\\Desktop\\NSI_Test\\Test\\Test.Domain\\Test.Domain.csproj",
+  "projectFilePath": "C:\\Users\\DzOnZi\\Desktop\\Projekti\\NSI_Test\\Test\\Test.Domain\\Test.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DzOnZi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.2\\microsoft.aspnetcore.cryptography.internal.8.0.2.nupkg.sha512",
     "C:\\Users\\DzOnZi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.2\\microsoft.aspnetcore.cryptography.keyderivation.8.0.2.nupkg.sha512",

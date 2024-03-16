@@ -7,12 +7,11 @@ using Test.Domain.Entities;
 
 namespace Test.Api.Controllers;
 
-[ApiController]
-[Route("[controller]")]
-public class CompanyController(ITestDbContext dbContext) : ControllerBase
+
+public class CompanyController(ITestDbContext dbContext) : ApiBaseController
 {
 
-    [HttpGet("GetAllCompanies")]
+    [HttpGet]
     public async Task<IActionResult> GetAllCompanies()
     {
         var companies = await dbContext.Companies.Include(p => p.Products).ToListAsync();
@@ -21,7 +20,7 @@ public class CompanyController(ITestDbContext dbContext) : ControllerBase
     }
     
     
-    [HttpGet("details")]
+    [HttpGet]
     public async Task<IActionResult> Details(string id)
     {
         var result = await dbContext.Companies.Include(x => x.Products)
@@ -30,7 +29,7 @@ public class CompanyController(ITestDbContext dbContext) : ControllerBase
         return Ok(result.ToDto());
     }
 
-    [HttpPost("create")]
+    [HttpPost]
     public async Task<IActionResult> Create(CompanyCreateDto companyCreateDto)
     {
         var company = companyCreateDto.ToEntity();
