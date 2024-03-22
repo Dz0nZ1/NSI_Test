@@ -22,8 +22,4 @@
       <ProjectReference Include="..\Test.Domain\Test.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Product\Commands\" />
-    </ItemGroup>
-
 </Project>
