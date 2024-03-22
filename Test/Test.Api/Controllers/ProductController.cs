@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Test.Application.Common.Dto.Product;
 using Test.Application.Common.Interfaces;
 using Test.Application.Common.Mappers;
+using Test.Application.Product.Commands;
 using Test.Application.Product.Queries;
 
 namespace Test.Api.Controllers;
@@ -21,21 +22,18 @@ public class ProductController(ITestDbContext dbContext) : ApiBaseController
 
     [HttpGet]
     public async Task<IActionResult> Details([FromQuery] ProductDetailsQuery query) => Ok(await Mediator.Send(query));
-  
+
 
     [HttpPost]
-    public async Task<IActionResult> Create(ProductCreateDto productDto)
-    {
-        var company = await dbContext.Companies.Where(x => x.Id.Equals(productDto.CompanyId)).FirstOrDefaultAsync();
-        
-        if (company == null) return BadRequest();
-        var product = productDto.ToCustomDto(company);
-        
-        await dbContext.Products.AddAsync(product);
-        await dbContext.SaveChangesAsync(new CancellationToken());
-        
-        return Ok("Product has been created");
-    }
+    public async Task<IActionResult> CreateProductMediator(ProductCreateCommand command) => Ok(await Mediator.Send(command));
 
+
+    // [HttpPost]
+    // public async Task<IActionResult> CreateProduct(TestProductCreateDto product)
+    // {
+    //   var myApi = RestService.For<ITestApi>("http://localhost:5032");  
+    //   var result = MyApi.CreateProductAsync(new DemoProductRequestDto(product));
+    //   return Ok()
+    // }
 
 }
