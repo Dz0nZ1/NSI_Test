@@ -11,9 +11,9 @@ public static partial class ProductMapper
 
     public static partial IList<ProductDetailsDto> ToListDto(this List<Domain.Entities.Product> entities);
 
-    public static Domain.Entities.Product ToCustomDto(this ProductCreateDto dto, Company company)
+    public static Domain.Entities.Product FromCreateDtoToEntity(this ProductCreateDto dto)
     {
-        var product = new Domain.Entities.Product(Guid.NewGuid(), dto.Name, dto.Description, company);
+        var product = new Domain.Entities.Product(dto.Name, dto.Description);
         return product;
     }
 
