@@ -11,11 +11,16 @@ public class Product
     
     private Product(){}
     
-    public Product(Guid id, string name, string description, Company company)
+    public Product(string name, string description)
     {
-        Id = id;
+        Id = Guid.NewGuid();
         Name = name;
         Description = description;
+    }
+
+    public Product AddCompany(Company company)
+    {
         Company = company;
+        return this;
     }
 }
